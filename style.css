@@ -314,7 +314,7 @@ p, h1, h2, h3, h4, h5, h6 {
     background: var(--ocean);
     color: var(--aquaaa);
     min-width: 768px;
-    max-width: 1280px;
+    max-width: 1160px;
     min-height: 640px;
     height: 100vh;
     height: 100dvh;
@@ -343,6 +343,12 @@ p, h1, h2, h3, h4, h5, h6 {
   main h1 {
     font-size: 8rem;
     font-weight: 600;
+  }
+
+  @media only screen and (min-width: 760px) {
+    main h1 {
+      font-size:5em;
+    }
   }
   
   #extra {
@@ -424,8 +430,8 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 
   #img-5 { /* girl blue eyes dark hair */
-    top: 21vh;
-    left: 49vw;
+    top: 10vh;
+    right: 40vw;
   }
 
   #img-6 { /* black girl */
