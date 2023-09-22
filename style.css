@@ -1,65 +1,110 @@
 :root {
   --ocean: rgb(12, 51, 80);
   --aquaaa: rgb(102, 253, 246);
+  --dark-bg: #252525;
 }
 
+/* CSS Reset */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Sen', sans-serif;
 }
 
-/* mobile first */
-@media (min-width: 415px) {
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.2;
+  background: #333;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* mobile first - 320 x 640 */
+/* mobile first - 320 x 640 */
+/* mobile first - 320 x 640 */
+/* mobile first - 320 x 640 */
+
+@media only screen and (max-width: 319px) {
+  #content-container {
+    display: none;
+  }
+  
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
   /* Content Placement */
   body {
+    font-family: 'Sen', sans-serif;
+    background: var(--ocean);
     color: var(--aquaaa);
-    max-width: 415px;
-    margin: auto;
+    min-width: 320px;
+    max-width: 360px;
+    min-height: 640px;
     height: 100vh;
     height: 100dvh;
+    margin: auto;
   }
   
   #content-container {
     position: relative;
-    width: 100%;
     height: 100%;
-    background: var(--ocean);
+    width: 100%;
     z-index: -2;
   }
   
   header {
-    padding: 1.2rem;
+    padding: 1rem;
   }
   
   main {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 1.2rem;
-    margin-top: 20%;
+    gap: 1.4rem;
+    padding: 1rem;
+    margin-top: 15vh;
   }
   
   main h1 {
-    font-size: 3.5em;
+    font-size: 2.6rem;
     font-weight: 600;
   }
   
+  #extra {
+    display: none;
+  }
+  
   main p {
-    font-size: 1.5em;
+    font-size: 1.2rem;
     color: white;
-    line-height: 1.4;
     display: block;
+    margin-bottom: 5px;
   }
   
   main a {
     background: var(--aquaaa);
     color: var(--ocean);
     border-radius: .2em;
-    padding: 22px 20px;
+    padding: 20px 15px;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     font-weight: 900;
     width: max-content;
   }
@@ -67,17 +112,20 @@
   footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    padding: 1.2rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
   }
 
   footer span {
-    color: #fff;
+    color: white;
     font-family:Arial, Helvetica, sans-serif;
     padding-left: 1rem;
-    font-size: 1.4em;
+    font-size: 1.3rem;
+  }
+
+  footer img, footer span {
+    cursor: pointer;
   }
 
   /* Image Placement */
@@ -96,28 +144,288 @@
     position: absolute;
   }
 
-  #img-2 {
-    width: 160px;
-    top: 60px;
-    right: 10px;
+  #img-2 { /* white girl */
+    width: 150px;
+    top: 11vh;
+    right: 2vw;
   }
 
-  #img-3 {
+  #img-3 { /* guy */
     width: 100px;
-    top: 80px;
-    left: 55px;
+    top: 14vh;
+    left: 12vw;
   }
 
-  #img-6 {
+  #img-6 { /* black girl */
     width: 180px;
-    right: 10px;
-    bottom: 130px;
+    right: 2vw;
+    top: 60vh;
   }
 }
 
-@media (min-width: 800px) {
-  .content-container {
-    max-width: 727px;
-    background: white;
+/* tablet sizes - 480 x 680 */
+/* tablet sizes - 480 x 680 */
+/* tablet sizes - 480 x 680 */
+/* tablet sizes - 480 x 680 */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* Content Placement */
+  body {
+    font-family: 'Sen', sans-serif;
+    background: var(--ocean);
+    color: var(--aquaaa);
+    min-width: 480px;
+    max-width: 680px;
+    min-height: 640px;
+    height: 100vh;
+    height: 100dvh;
+    margin: auto;
+  }
+  
+  #content-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+  }
+  
+  header {
+    padding: 2rem;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    padding: 2rem;
+    margin-top: 15vh;
+  }
+  
+  main h1 {
+    font-size: 5.6rem;
+    font-weight: 600;
+  }
+  
+  #extra {
+    display: none;
+  }
+  
+  main p {
+    font-size: 1.3rem;
+    color: white;
+    display: block;
+    max-width: 450px;
+    margin-bottom: 5px;
+  }
+  
+  main a {
+    background: var(--aquaaa);
+    color: var(--ocean);
+    border-radius: .2em;
+    padding: 25px 17px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 900;
+    width: max-content;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  footer span {
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 1rem;
+    font-size: 1.3rem;
+  }
+
+  footer img, footer span {
+    cursor: pointer;
+  }
+
+  /* Image Placement */
+  #img-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  } 
+
+  #img-1, #img-2, #img-3, #img-4, #img-5, #img-6 {
+    position: absolute;
+  }
+
+  #img-1 { /* whitest brunette */
+    width: 110px;
+    top: 30vh;
+    right: 5vw;
+  }
+
+  #img-2 { /* white girl dark hair */
+    width: 150px;
+    top: 5vh;
+    right: 5vw;
+  }
+
+  #img-3 { /* black and white guy */
+    width: 120px;
+    top: 10vh;
+    left: 5vw;
+  }
+
+  #img-4 { /* mr beanie */
+    width: 210px;
+    top: 70vh;
+    right: 12vw;
+  }
+
+  #img-5 { /* girl blue eyes dark hair */
+    top: 21vh;
+    left: 49vw;
+  }
+
+  #img-6 { /* black girl */
+    width: 120px;
+    right: 15vw;
+    top: 50vh;
+  }
+}
+
+/* desktop 1280 */
+/* desktop 1280 */
+/* desktop 1280 */
+/* desktop 1280 */
+
+@media only screen and (min-width: 768px) {
+  /* Content Placement */
+  body {
+    border: 1px solid white;
+    font-family: 'Sen', sans-serif;
+    background: var(--ocean);
+    color: var(--aquaaa);
+    min-width: 768px;
+    max-width: 1280px;
+    min-height: 640px;
+    height: 100vh;
+    height: 100dvh;
+    margin: auto;
+  }
+  
+  #content-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+  }
+  
+  header {
+    padding: 2rem 6rem;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    padding: 0 6rem;
+    margin-top: 5vh;
+  }
+  
+  main h1 {
+    font-size: 8rem;
+    font-weight: 600;
+  }
+  
+  #extra {
+    display: inline;
+  }
+  
+  main p {
+    font-size: 1.3rem;
+    color: white;
+    display: block;
+    max-width: 450px;
+    margin-bottom: 5px;
+  }
+  
+  main a {
+    background: var(--aquaaa);
+    color: var(--ocean);
+    border-radius: .2em;
+    padding: 25px 17px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 900;
+    width: max-content;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  footer span {
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 1rem;
+    font-size: 1.3rem;
+  }
+
+  footer img, footer span {
+    cursor: pointer;
+  }
+
+  /* Image Placement */
+  #img-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  } 
+
+  #img-1, #img-2, #img-3, #img-4, #img-5, #img-6 {
+    position: absolute;
+  }
+
+  #img-1 { /* whitest brunette */
+    width: 110px;
+    top: 30vh;
+    right: 5vw;
+  }
+
+  #img-2 { /* white girl dark hair */
+    width: 150px;
+    top: 5vh;
+    right: 5vw;
+  }
+
+  #img-3 { /* black and white guy */
+    width: 120px;
+    top: 10vh;
+    left: 5vw;
+  }
+
+  #img-4 { /* mr beanie */
+    width: 210px;
+    top: 70vh;
+    right: 12vw;
+  }
+
+  #img-5 { /* girl blue eyes dark hair */
+    top: 21vh;
+    left: 49vw;
+  }
+
+  #img-6 { /* black girl */
+    width: 120px;
+    right: 15vw;
+    top: 50vh;
   }
 }
